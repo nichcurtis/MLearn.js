@@ -28,7 +28,7 @@ dataset.from.csv(pathToCSV)
 
         dataset.normalize().shuffle();
         trainingData = dataset.split(.9);
-        validationData = dataset.split(.1);
+        validationData = dataset.split(.1, .9);
 
         util.log('Training Model W/ ' + trainingData.length + ' records and ' + trainingData[0].x.length + ' features');
 
